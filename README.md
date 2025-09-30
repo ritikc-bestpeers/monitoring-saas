@@ -49,8 +49,7 @@ Each service has its own dependencies:
 
 ```bash
 cd backend && npm install
-cd ../frontend && npm install
-cd ../worker && npm install
+cd ../monitoring-frontend && npm install
 ```
 
 ### 3. Configure Environment
@@ -88,18 +87,19 @@ cd backend && npm run dev
 
 **Worker**
 ```bash
-cd worker && npm run dev
+cd backend && npm run monitor:synthetic
+cd backend && npm run monitor:ssl
 ```
 
 **Frontend**
 
 ```bash
-cd frontend && npm run dev
+cd monitoring-frontend && npm run dev
 ```
 
 ## Usage
 
-- Open http://localhost:5173
+- Open http://localhost:3000
  (or your frontend port) for the dashboard.
 
 - Add websites/APIs to start monitoring.
