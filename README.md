@@ -29,7 +29,7 @@ A full-stack monitoring SaaS application designed to track uptime, SSL certifica
 
 ```bash
 ├── backend/ # Express + GraphQL API
-├── frontend/ # React/Tailwind dashboard
+├── monitoring-frontend/ # React/Tailwind dashboard
 ├── worker/ # BullMQ job processing
 ├── .gitignore
 └── README.md
