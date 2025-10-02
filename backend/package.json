@@ -28,6 +28,7 @@
     "joi": "^18.0.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.2",
+    "monitoring-saas": "file:..",
     "multer": "^2.0.2",
     "multer-storage-cloudinary": "^4.0.0",
     "pino": "^9.11.0",
