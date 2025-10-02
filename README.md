@@ -48,8 +48,6 @@ cd monitoring-saas
 Each service has its own dependencies:
 
 ```bash
-npm install
-
 cd backend && npm install
 cd ../monitoring-frontend && npm install
 ```
@@ -87,23 +85,17 @@ docker run -d \
 cd backend && npm run dev
 ```
 
-**Frontend**
-
-```bash
-cd monitoring-frontend && npm run dev
-```
-
 **Worker**
 ```bash
 cd backend && npm run monitor:synthetic
 cd backend && npm run monitor:ssl
 ```
 
-**Generate Vapid Keys for WebPush**
-```bash
-npx web-push generate-vapid-keys
-```
+**Frontend**
 
+```bash
+cd monitoring-frontend && npm run dev
+```
 
 ## Usage
 
