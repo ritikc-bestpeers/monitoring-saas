@@ -95,7 +95,6 @@ npm run start:all:dev
 
 - ElasticSearch can be integrated for log storage and analytics.
 
-## Contributing
 
 ## Contribution
 
