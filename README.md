@@ -28,7 +28,7 @@ A full-stack monitoring SaaS application designed to track uptime, SSL certifica
 ## Project Structure
 
 ```bash
-├── backend/ # Express + GraphQL API
+├── backend/ # Express
 ├── monitoring-frontend/ # React/Tailwind dashboard
 ├── worker/ # BullMQ job processing
 ├── .gitignore
@@ -43,58 +43,39 @@ git clone https://github.com/your-org/monitoring-saas.git
 cd monitoring-saas
 ```
 
-### 2. Install Dependencies
+### 2. Install Dependencies in root folder
 
-Each service has its own dependencies:
 
 ```bash
-cd backend && npm install
-cd ../monitoring-frontend && npm install
+npm install && npm run deps:install
 ```
+
+
 
 ### 3. Configure Environment
 
-Create a .env file inside backend/ with the following variables:
-
-```
-PORT=4000
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/monitoring
-REDIS_URL=redis://localhost:6379
-JWT_SECRET=your_jwt_secret
+```bash
+npm run env:create
 ```
 
-Other services (worker/frontend) can share REDIS_URL and API URLs.
+### 4. Start/Stop Redis Container
 
-### 4. Run Services
-
-In separate terminals:
-
-**Redis Container**
 
 ```bash
-docker run -d \
-  --name monitoring-redis \
-  -p 6379:6379 \
-  redis:7
+# Start Redis Container
+npm run start:redis
+
+# Stop Redis Container
+npm run stop:redis
 ```
 
-**Backend**
+### 5. Start Applications
 
 ```bash
-cd backend && npm run dev
-```
+# It will start all the applications in terminals
 
-**Worker**
-```bash
-cd backend && npm run monitor:synthetic
-cd backend && npm run monitor:ssl
-```
-
-**Frontend**
-
-```bash
-cd monitoring-frontend && npm run dev
+# development/local
+npm run start:all:dev 
 ```
 
 ## Usage
@@ -117,4 +98,3 @@ cd monitoring-frontend && npm run dev
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
-

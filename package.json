@@ -8,8 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "env:create": "node scripts/createEnv.js",
     "deps:install": "npm install --prefix backend && npm install --prefix monitoring-frontend",
-    "redis:start": "docker run -d --name monitoring-redis -p 6379:6379 redis:7",
-    "redis:stop": "docker stop monitoring-redis && docker rm monitoring-redis"
+    "start:redis": "docker run -d --name monitoring-redis -p 6379:6379 redis:latest",
+    "stop:redis": "docker stop monitoring-redis && docker rm monitoring-redis",
+    "backend:dev": "npm run dev --prefix backend",
+    "worker:synthetic": "npm run monitor:synthetic --prefix backend",
+    "worker:ssl": "npm run monitor:ssl --prefix backend",
+    "frontend:dev": "npm run dev --prefix monitoring-frontend",
+    "start:all:dev": "node scripts/startAll.js"
   },
   "keywords": [],
   "author": "",
