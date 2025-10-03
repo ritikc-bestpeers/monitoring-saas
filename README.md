@@ -78,6 +78,10 @@ npm run stop:redis
 npm run start:all:dev 
 ```
 
+## ER Diagram
+
+<img src="./docs/erdiagram.png">
+
 ## Usage
 
 - Open http://localhost:3000
