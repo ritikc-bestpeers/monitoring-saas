@@ -97,4 +97,34 @@ npm run start:all:dev
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+## Contribution
+
+**Note** - Give a ⭐ to this project
+
+- Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
+- Clone your fork down to your local machine
+
+```bash
+git clone https://github.com/<your_username>/monitoring-saas.git
+```
+
+- Create a branch
+
+```bash
+git checkout -b branch-name
+```
+
+- Make your changes (choose from any task below)
+- Commit and push
+
+```bash
+git add .
+git commit -m 'Commit message'
+git push origin branch-name
+```
+
+- Create a new pull request from your forked repository (Click the New Pull Request button located at the top of your repo)
+- Wait for your PR review and merge approval!
+- Star this repository if you had fun!
+
+For more information, Please read [CONTRIBUTING.md](https://github.com/ritikc-bestpeers/monitoring-saas/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
